@@ -51,7 +51,7 @@ export default function NewRequestPage() {
       .from("request_batches")
       .insert({
         user_id: user.id,
-        platform,
+        target_platform: platform,
         url_count: urlList.length,
         status: "pending",
       })

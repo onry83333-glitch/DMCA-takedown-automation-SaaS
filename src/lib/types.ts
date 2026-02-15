@@ -8,7 +8,7 @@ export type Profile = {
 export type RequestBatch = {
   id: string;
   user_id: string;
-  platform: string;
+  target_platform: string;
   url_count: number;
   status: "pending" | "submitted" | "removed" | "failed";
   created_at: string;

@@ -100,7 +100,7 @@ export default function RequestsPage() {
                       minute: "2-digit",
                     })}
                   </span>
-                  <span className="text-sm font-medium text-white">{batch.platform}</span>
+                  <span className="text-sm font-medium text-white">{batch.target_platform}</span>
                   <span className="text-sm text-gray-400">{batch.url_count} URL</span>
                   {statusBadge(batch.status)}
                 </div>
