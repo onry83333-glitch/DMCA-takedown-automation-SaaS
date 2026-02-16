@@ -132,7 +132,7 @@ export default function DashboardPage() {
                       {new Date(batch.created_at).toLocaleDateString("ja-JP")}
                     </td>
                     <td className="px-4 py-3 text-gray-300">{batch.target_platform}</td>
-                    <td className="px-4 py-3 text-gray-300">{batch.url_count}</td>
+                    <td className="px-4 py-3 text-gray-300">{batch.total_urls}</td>
                     <td className="px-4 py-3">{statusBadge(batch.status)}</td>
                   </tr>
                 ))}

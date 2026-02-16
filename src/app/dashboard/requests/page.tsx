@@ -101,7 +101,7 @@ export default function RequestsPage() {
                     })}
                   </span>
                   <span className="text-sm font-medium text-white">{batch.target_platform}</span>
-                  <span className="text-sm text-gray-400">{batch.url_count} URL</span>
+                  <span className="text-sm text-gray-400">{batch.total_urls} URL</span>
                   {statusBadge(batch.status)}
                 </div>
                 <svg
@@ -131,12 +131,12 @@ export default function RequestsPage() {
                           className="flex items-center justify-between gap-3 rounded-lg bg-gray-900 px-4 py-3"
                         >
                           <a
-                            href={urlItem.url}
+                            href={urlItem.infringing_url}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="min-w-0 flex-1 truncate text-sm text-blue-400 hover:text-blue-300"
                           >
-                            {urlItem.url}
+                            {urlItem.infringing_url}
                           </a>
                           {statusBadge(urlItem.status)}
                         </div>

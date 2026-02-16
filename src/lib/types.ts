@@ -9,7 +9,10 @@ export type RequestBatch = {
   id: string;
   user_id: string;
   target_platform: string;
-  url_count: number;
+  total_urls: number;
+  successful_count: number;
+  failed_count: number;
+  pending_count: number;
   status: "pending" | "submitted" | "removed" | "failed";
   created_at: string;
 };
@@ -17,8 +20,11 @@ export type RequestBatch = {
 export type RequestUrl = {
   id: string;
   batch_id: string;
-  url: string;
+  infringing_url: string;
+  source_site: string | null;
   status: "pending" | "submitted" | "removed" | "failed";
+  submitted_at: string | null;
+  removed_at: string | null;
   created_at: string;
 };
 

@@ -52,7 +52,10 @@ export default function NewRequestPage() {
       .insert({
         user_id: user.id,
         target_platform: platform,
-        url_count: urlList.length,
+        total_urls: urlList.length,
+        successful_count: 0,
+        failed_count: 0,
+        pending_count: urlList.length,
         status: "pending",
       })
       .select()
@@ -67,7 +70,7 @@ export default function NewRequestPage() {
     // Insert URLs
     const urlRecords = urlList.map((url) => ({
       batch_id: batch.id,
-      url,
+      infringing_url: url,
       status: "pending" as const,
     }));
 
